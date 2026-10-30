@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 650" role="img" aria-label="Portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEECE7"/>
+      <stop offset="1" stop-color="#E6E3DC"/>
+    </linearGradient>
+    <radialGradient id="soft" cx="0.3" cy="0.05" r="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#171717" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="520" height="650" fill="url(#bg)"/>
+  <rect width="520" height="650" fill="url(#grid)"/>
+  <rect width="520" height="650" fill="url(#soft)"/>
+  <!-- abstract operator silhouette (geometric, not a real person) -->
+  <g fill="#DDDAD3">
+    <circle cx="260" cy="272" r="86"/>
+    <path d="M120 650c0-92 63-160 140-160s140 68 140 160z"/>
+  </g>
+  <circle cx="260" cy="272" r="86" fill="none" stroke="#C46A3A" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="260" y="286" font-family="IBM Plex Mono, Consolas, monospace" font-size="34" font-weight="600" fill="#666666" text-anchor="middle">EM</text>
+  <text x="260" y="600" font-family="IBM Plex Mono, Consolas, monospace" font-size="13" fill="#98948B" text-anchor="middle" letter-spacing="3">PORTRAIT PLACEHOLDER</text>
+</svg>

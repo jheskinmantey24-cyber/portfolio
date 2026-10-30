@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmanuel Mantey — Full-Stack Software Developer</title>
+  <meta name="description" content="Portfolio of Emmanuel Mantey, a full-stack software developer from Ghana building modern web applications with JavaScript, Node.js, and thoughtful design.">
+  <meta name="author" content="Emmanuel Mantey">
+  <meta name="theme-color" content="#F8F7F4">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Emmanuel Mantey — Portfolio">
+  <meta property="og:title" content="Emmanuel Mantey — Full-Stack Software Developer">
+  <meta property="og:description" content="Designing experiences. Engineering solutions. Modern web applications with JavaScript, Node.js, and thoughtful design.">
+  <!-- EDIT: make these absolute when the production domain is known -->
+  <meta property="og:url" content="emmanuel-mantey.example.com/index.html">
+  <meta property="og:image" content="assets/images/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+  <!-- Structured data — only verified information included -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Emmanuel Mantey",
+    "jobTitle": "Full-Stack Software Developer",
+    "nationality": "Ghanaian",
+    "knowsAbout": ["JavaScript", "Node.js", "HTML", "CSS", "Git", "GitHub", "REST API development", "Responsive web development"],
+    "description": "Full-stack software developer building modern web applications with JavaScript and Node.js."
+  }
+  </script>
+  <!-- EDIT: add "url" to this schema once the production domain exists -->
+</head>
+<body class="page-enter" id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html" aria-label="Emmanuel Mantey — home">EM<span class="brand__dot">.</span></a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" aria-current="page" href="./index.html">Home</a></li>
+          <li><a class="nav__link" href="./about.html">About</a></li>
+          <li><a class="nav__link" href="./skills.html">Expertise</a></li>
+          <li><a class="nav__link" href="./projects.html">Projects</a></li>
+          <li><a class="nav__link" href="./contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="./contact.html">Let's Talk</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= Hero — editorial split ================= -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container container--wide">
+        <div class="hero__inner">
+          <div>
+            <div class="hero-badge-row">
+              <span class="eyebrow"><span class="num">01 /</span> Portfolio</span>
+              <span class="badge badge--hero"><span class="badge__pulse" aria-hidden="true"></span>Full-Stack Software Developer</span>
+            </div>
+
+            <h1>
+              Designing <span class="hl">Experiences.</span><br>
+              Engineering <span class="hl">Solutions.</span>
+            </h1>
+
+            <p class="lead">
+              I'm Emmanuel Mantey, a full-stack software developer building
+              modern web applications with JavaScript, Node.js, and
+              thoughtful design.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#featured">
+                Explore My Projects
+                <svg class="btn__arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M2 7.5h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="btn btn--ghost" href="./contact.html">Get in Touch</a>
+            </div>
+
+            <div class="hero__meta">
+              <span><i class="dot" aria-hidden="true"></i>Open to opportunities</span>
+              <span aria-hidden="true">·</span>
+              <span>Based in Ghana</span>
+              <span aria-hidden="true">·</span>
+              <span>JavaScript · Node.js · Git</span>
+            </div>
+          </div>
+
+          <!-- Visual composition: portrait placeholder over workspace photography -->
+          <div class="hero__visual" aria-hidden="false">
+            <figure class="hero__photo" style="margin:0;">
+              <img src="./assets/images/photos/workspace-analytics.jpg"
+                   alt="A developer workspace with a laptop showing an analytics dashboard, warm natural light and a plant"
+                   width="1600" height="1067" loading="eager" fetchpriority="high">
+              <figcaption class="media-card__status">My working environment</figcaption>
+            </figure>
+
+            <figure class="portrait-card" style="margin:0;">
+              <img src="./assets/images/portrait-mantey.jpeg"
+                   alt="Portrait of Emmanuel Mantey — seated in a warm, sunlit classroom wearing red headphones and a green sweater"
+                   width="500" height="1080">
+            </figure>
+
+            <span class="hero__vertical" aria-hidden="true">EM · MMXXVI · Ghana</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Technology marquee ================= -->
+    <section class="section--tight" style="padding-block:0;" aria-label="Core technologies">
+      <div class="marquee" role="group" aria-label="Core technologies: HTML5, CSS3, JavaScript, Node.js, Git, GitHub">
+        <div class="marquee__track">
+          <span class="marquee__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2.5h16l-1.3 15.3L12 21.5l-6.7-3.7z"/><path d="M12 6.2v6.3m0 0-3-1.7m3 1.7 3-1.7M7.5 10h9"/></svg>
+            HTML5
+          </span>
+          <span class="marquee__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2.5h16l-1.3 15.3L12 21.5l-6.7-3.7z"/><path d="M8.5 7h7l-.7 4.3-2.8 1.7-2.8-1.7V10h5"/><path d="M8.6 13.5h6.8l-.5 3-2.9 1.6-2.9-1.6"/></svg>
+            CSS3
+          </span>
+          <span class="marquee__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="4"/><path d="M10.5 15.5h2V9m2.5 0c1.4 0 2 .9 2 2.3s.6 2.3 2 2.3" stroke-linecap="round"/><path d="M7.5 9v4.5a2 2 0 0 1-2 2" stroke-linecap="round"/></svg>
+            JavaScript
+          </span>
+          <span class="marquee__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 1.8l8.5 4.9v10.6L12 22.2l-8.5-4.9V6.7z"/><path d="M9.2 9.4v5.2m0-5.2c1.6-1 3.1-.6 3.1 1.3v3.9m2.5-5.2v5.2" stroke-linecap="round"/></svg>
+            Node.js
+          </span>
+          <span class="marquee__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.7 10.7c-.9 2-2.6 3.4-5.7 3.4s-4.8-1.4-5.7-3.4M6.3 10.7 4 13m13.7-2.3L20 13M4 13c.3 4.8 3.6 8 8 8s7.7-3.2 8-8c.3-4.8-3.5-7.5-8-7.5S3.7 8.2 4 13z"/><circle cx="9.5" cy="7.5" r="1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="7.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Git
+          </span>
+          <span class="marquee__item">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </span>
+          <span class="marquee__item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 2.5h16l-1.3 15.3L12 21.5l-6.7-3.7z"/><path d="M12 6.2v6.3m0 0-3-1.7m3 1.7 3-1.7M7.5 10h9"/></svg>
+            HTML5
+          </span>
+          <span class="marquee__item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 2.5h16l-1.3 15.3L12 21.5l-6.7-3.7z"/><path d="M8.5 7h7l-.7 4.3-2.8 1.7-2.8-1.7V10h5"/><path d="M8.6 13.5h6.8l-.5 3-2.9 1.6-2.9-1.6"/></svg>
+            CSS3
+          </span>
+          <span class="marquee__item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="2.5" width="19" height="19" rx="4"/><path d="M10.5 15.5h2V9m2.5 0c1.4 0 2 .9 2 2.3s.6 2.3 2 2.3" stroke-linecap="round"/><path d="M7.5 9v4.5a2 2 0 0 1-2 2" stroke-linecap="round"/></svg>
+            JavaScript
+          </span>
+          <span class="marquee__item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1.8l8.5 4.9v10.6L12 22.2l-8.5-4.9V6.7z"/><path d="M9.2 9.4v5.2m0-5.2c1.6-1 3.1-.6 3.1 1.3v3.9m2.5-5.2v5.2" stroke-linecap="round"/></svg>
+            Node.js
+          </span>
+          <span class="marquee__item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.7 10.7c-.9 2-2.6 3.4-5.7 3.4s-4.8-1.4-5.7-3.4M6.3 10.7 4 13m13.7-2.3L20 13M4 13c.3 4.8 3.6 8 8 8s7.7-3.2 8-8c.3-4.8-3.5-7.5-8-7.5S3.7 8.2 4 13z"/><circle cx="9.5" cy="7.5" r="1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="7.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Git
+          </span>
+          <span class="marquee__item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 — What I Build (stone band) ================= -->
+    <section class="section band" id="services">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow"><span class="num">02 /</span> What I Build</span>
+          <h2>Practical software, end to end.</h2>
+          <p class="section-intro">
+            Three areas of focus, one habit: turning requirements into working,
+            maintainable products.
+          </p>
+        </div>
+
+        <div class="three-col">
+          <article class="card card--hover" data-reveal>
+            <span class="card__num" aria-hidden="true">01</span>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 8.5h19M6 6.3h.01M8.4 6.3h.01"/><path d="m10 12-2.5 2.5L10 17m4-5 2.5 2.5L14 17" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>Responsive, accessible, and engaging web experiences built with modern frontend technologies.</p>
+          </article>
+
+          <article class="card card--hover" data-reveal data-reveal-delay="100">
+            <span class="card__num" aria-hidden="true">02</span>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01M11.5 6.5h6M11.5 17.5h6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Backend Development</h3>
+            <p>Server-side applications, APIs, and backend systems designed around maintainability and practical business requirements.</p>
+          </article>
+
+          <article class="card card--hover" data-reveal data-reveal-delay="200">
+            <span class="card__num" aria-hidden="true">03</span>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2.5 3 7v10l9 4.5 9-4.5V7z"/><path d="M3 7l9 4.5L21 7M12 11.5v10" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Full-Stack Solutions</h3>
+            <p>Connecting interfaces, business logic, and data to create complete digital products.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 — Featured Projects ================= -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow"><span class="num">03 /</span> Featured Projects</span>
+          <h2>Selected work, built to be used.</h2>
+          <p class="section-intro">
+            Each project solves a real problem and documents its own
+            engineering decisions — read the case studies.
+          </p>
+        </div>
+
+        <div class="grid" id="featured-projects" data-projects-grid="featured" aria-live="polite"></div>
+
+        <div style="margin-top: 2.75rem; display:flex; justify-content:center;" data-reveal>
+          <a class="btn btn--ghost" href="./projects.html">
+            View All Projects
+            <svg class="btn__arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M2 7.5h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 — Value statement (dark forest band) ================= -->
+    <section class="section band--dark" id="value">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow eyebrow--center"><span class="num">04 /</span> My Approach</span>
+          <h2>More than code. I build solutions.</h2>
+          <p class="section-intro">
+            Great software is not only about writing code. It's about
+            understanding problems, designing thoughtful solutions, and
+            building systems people can depend on.
+          </p>
+        </div>
+
+        <div class="flow-visual" data-reveal>
+          <div class="flow-track" data-stage-group>
+            <div class="flow-node stage-item">
+              <div class="flow-node__disc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 20.4s-6.9-4.5-8.7-8.2C1.9 9.3 3.5 6.1 6.5 6.1c1.8 0 3.1 1.1 3.7 2.2h3.6c.6-1.1 1.9-2.2 3.7-2.2 3 0 4.6 3.2 3.2 6.1-1.8 3.7-8.7 8.2-8.7 8.2z" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Problem</h3>
+              <p>Understand what users and the business actually need</p>
+            </div>
+
+            <div class="flow-node stage-item">
+              <div class="flow-node__disc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 19.5 14 9l4-1.5L19.5 3 12 3 3 12l0 7.5z" stroke-linejoin="round"/><path d="M4 20h16M14 9l-3.5 3" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Design</h3>
+              <p>Shape the interface and logic with purpose</p>
+            </div>
+
+            <div class="flow-node stage-item">
+              <div class="flow-node__disc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m8 6-5 6 5 6M16 6l5 6-5 6" stroke-linecap="round" stroke-linejoin="round"/><path d="m13 4-2 16" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Development</h3>
+              <p>Build it with clean, maintainable code</p>
+            </div>
+
+            <div class="flow-node stage-item">
+              <div class="flow-node__disc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Solution</h3>
+              <p>Deliver a system people can depend on</p>
+            </div>
+
+            <div class="flow-line" aria-hidden="true">
+              <svg viewBox="0 0 100 2" preserveAspectRatio="none">
+                <line class="flow-line__base" x1="0" y1="1" x2="100" y2="1" vector-effect="non-scaling-stroke"/>
+                <line class="flow-line__dash" x1="0" y1="1" x2="100" y2="1" vector-effect="non-scaling-stroke"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 — Closing CTA ================= -->
+    <section class="section" id="cta">
+      <div class="container">
+        <div style="text-align:center; max-width: 44rem; margin-inline:auto;" data-reveal>
+          <span class="eyebrow eyebrow--center"><span class="num">05 /</span> Next Step</span>
+          <h2 style="margin-top:1.1rem;">Have an idea worth building?</h2>
+          <p style="margin: 1.2rem auto 2rem; max-width:33rem;">
+            Let's turn your ideas into functional digital experiences.
+          </p>
+          <a class="btn btn--accent" href="./contact.html">
+            Start a Conversation
+            <svg class="btn__arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M2 7.5h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="./index.html" aria-label="Emmanuel Mantey — home">EM<span class="brand__dot">.</span></a>
+        <p>
+          Full-stack software developer building practical web applications
+          with JavaScript, Node.js, and disciplined engineering.
+        </p>
+        <div class="social-row" data-social-row style="margin-top:1.4rem;"></div>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer — pages">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./skills.html">Skills &amp; Expertise</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul data-footer-contact></ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Emmanuel Mantey. All rights reserved.</p>
+      <p class="mono" aria-hidden="true">HTML · CSS · JavaScript · Node.js — designed &amp; built from scratch</p>
+      <a class="to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="./js/config.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/navigation.js" defer></script>
+  <script src="./js/animations.js" defer></script>
+  <script src="./js/contact-links.js" defer></script>
+  <script src="./js/projects.js" defer></script>
+</body>
+</html>

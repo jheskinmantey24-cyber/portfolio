@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Point of Sale System concept preview: a browser window with a navy sidebar, a product catalogue, a checkout cart, and a sales summary. Clearly labeled as a concept preview with demo data.">
+  <defs>
+    <linearGradient id="pos-canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F1EFEA"/>
+      <stop offset="1" stop-color="#E7E4DD"/>
+    </linearGradient>
+    <radialGradient id="pos-tint" cx="0.82" cy="0.08" r="0.75">
+      <stop offset="0" stop-color="#10B981" stop-opacity="0.1"/>
+      <stop offset="0.6" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="pos-fogrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#171717" stroke-opacity="0.04"/>
+    </pattern>
+    <clipPath id="pos-window">
+      <rect x="120" y="62" width="560" height="376" rx="16"/>
+    </clipPath>
+    <filter id="pos-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#171717" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#171717" flood-opacity="0.08"/>
+    </filter>
+    <filter id="pos-softshadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.4" flood-color="#0F2540" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- warm editorial canvas -->
+  <rect width="800" height="500" fill="url(#pos-canvas)"/>
+  <rect width="800" height="500" fill="url(#pos-fogrid)"/>
+  <rect width="800" height="500" fill="url(#pos-tint)"/>
+
+  <!-- ================= browser window ================= -->
+  <g filter="url(#pos-shadow)">
+    <rect x="120" y="62" width="560" height="376" rx="16" fill="#FFFFFF"/>
+  </g>
+  <rect x="120" y="62" width="560" height="376" rx="16" fill="none" stroke="#DDDAD3" stroke-width="1.2"/>
+
+  <!-- chrome bar -->
+  <path d="M136 62h528a16 16 0 0 1 16 16v20H120V78a16 16 0 0 1 16-16z" fill="#F1F3F5"/>
+  <line x1="120" y1="98" x2="680" y2="98" stroke="#E3E6EA" stroke-width="1"/>
+  <circle cx="142" cy="80" r="5.5" fill="#C96F5A"/>
+  <circle cx="162" cy="80" r="5.5" fill="#C7A24C"/>
+  <circle cx="182" cy="80" r="5.5" fill="#6FA07A"/>
+  <rect x="208" y="70" width="330" height="20" rx="10" fill="#FFFFFF" stroke="#E3E6EA"/>
+  <rect x="218" y="75.5" width="9" height="9" rx="2" fill="none" stroke="#8A94A6" stroke-width="1.2"/>
+  <text x="234" y="83.5" font-family="IBM Plex Mono, Consolas, monospace" font-size="10" fill="#8A94A6">pos-demo · checkout</text>
+  <circle cx="658" cy="80" r="5" fill="none" stroke="#C3CBD4" stroke-width="1.5"/>
+
+  <!-- ================= viewport (clipped to window) ================= -->
+  <g clip-path="url(#pos-window)">
+    <rect x="120" y="98" width="560" height="340" fill="#F5F6F8"/>
+    <!-- sidebar (deep navy) -->
+    <rect x="120" y="98" width="112" height="340" fill="#0F2540"/>
+    <!-- brand -->
+    <rect x="136" y="112" width="14" height="14" rx="4" fill="#34D399"/>
+    <text x="156" y="123" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" font-weight="600" fill="#FFFFFF" letter-spacing="1">POS</text>
+    <!-- nav: checkout view is active -->
+    <rect x="138" y="151" width="7" height="7" rx="2" fill="none" stroke="#7E8DAB" stroke-width="1.4"/>
+    <text x="152" y="161" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#7E8DAB">Dashboard</text>
+
+    <rect x="128" y="176" width="96" height="22" rx="6" fill="rgba(255,255,255,0.08)"/>
+    <rect x="138" y="183" width="7" height="7" rx="2" fill="#34D399"/>
+    <text x="152" y="191" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#FFFFFF">Checkout</text>
+
+    <rect x="138" y="217" width="7" height="7" rx="2" fill="none" stroke="#7E8DAB" stroke-width="1.4"/>
+    <text x="152" y="223" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#7E8DAB">Products</text>
+
+    <rect x="138" y="251" width="7" height="7" rx="2" fill="none" stroke="#7E8DAB" stroke-width="1.4"/>
+    <text x="152" y="257" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#7E8DAB">Sales</text>
+
+    <rect x="138" y="285" width="7" height="7" rx="2" fill="none" stroke="#7E8DAB" stroke-width="1.4"/>
+    <text x="152" y="291" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#7E8DAB">Reports</text>
+
+    <rect x="138" y="319" width="7" height="7" rx="2" fill="none" stroke="#7E8DAB" stroke-width="1.4"/>
+    <text x="152" y="325" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#7E8DAB">Settings</text>
+
+    <line x1="132" y1="400" x2="220" y2="400" stroke="rgba(255,255,255,0.1)"/>
+    <circle cx="146" cy="416" r="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="160" y="419.5" font-family="Inter, Segoe UI, sans-serif" font-size="9.5" fill="#7E8DAB">Staff</text>
+
+    <!-- main: checkout view -->
+    <text x="252" y="128" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="600" fill="#0F2540">Checkout</text>
+    <rect x="556" y="108" width="104" height="24" rx="12" fill="#FFFFFF" stroke="#E3E6EA"/>
+    <circle cx="568" cy="120" r="3.5" fill="#C7A24C"/>
+    <text x="576" y="123.5" font-family="IBM Plex Mono, Consolas, monospace" font-size="9" fill="#64748B">demo data</text>
+
+    <!-- KPI cards -->
+    <g filter="url(#pos-softshadow)">
+      <rect x="252" y="146" width="118" height="44" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+      <rect x="386" y="146" width="118" height="44" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+      <rect x="520" y="146" width="140" height="44" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+    </g>
+    <text x="264" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="8" letter-spacing="0.6" fill="#64748B">SALES TODAY</text>
+    <text x="264" y="181" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F2540">GH₵ 1,284</text>
+    <!-- mini bar sparkline -->
+    <rect x="342" y="172" width="4" height="9" fill="#10B981" opacity="0.45"/>
+    <rect x="349" y="168" width="4" height="13" fill="#10B981" opacity="0.65"/>
+    <rect x="356" y="164" width="4" height="17" fill="#10B981" opacity="0.9"/>
+
+    <text x="398" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="8" letter-spacing="0.6" fill="#64748B">ITEMS SOLD</text>
+    <text x="398" y="181" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F2540">96</text>
+
+    <text x="532" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="8" letter-spacing="0.6" fill="#64748B">TRANSACTIONS</text>
+    <text x="532" y="181" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0F2540">57</text>
+
+    <!-- product catalogue (2 x 3) -->
+    <text x="252" y="214" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#0F2540">Product catalogue</text>
+    <g font-family="Inter, Segoe UI, sans-serif">
+      <g filter="url(#pos-softshadow)">
+        <rect x="252" y="224" width="118" height="58" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+        <rect x="252" y="288" width="118" height="58" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+        <rect x="252" y="352" width="118" height="58" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+        <rect x="386" y="224" width="118" height="58" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+        <rect x="386" y="288" width="118" height="58" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+        <rect x="386" y="352" width="118" height="58" rx="8" fill="#FFFFFF" stroke="#E5E9EF"/>
+      </g>
+      <!-- tiles -->
+      <rect x="260" y="232" width="20" height="20" rx="6" fill="#E8EDF2"/>
+      <text x="288" y="243" font-size="9.5" fill="#0F2540">Rice — 5kg bag</text>
+      <text x="288" y="256" font-size="9.5" font-weight="700" fill="#0B8A61">GH₵ 42.00</text>
+      <text x="340" y="270" font-size="7.5" letter-spacing="0.5" fill="#98A2B3">ADD+</text>
+
+      <rect x="260" y="296" width="20" height="20" rx="6" fill="#E8EDF2"/>
+      <text x="288" y="307" font-size="9.5" fill="#0F2540">Cooking oil — 1L</text>
+      <text x="288" y="320" font-size="9.5" font-weight="700" fill="#0B8A61">GH₵ 18.50</text>
+      <text x="340" y="334" font-size="7.5" letter-spacing="0.5" fill="#98A2B3">ADD+</text>
+
+      <rect x="260" y="360" width="20" height="20" rx="6" fill="#E8EDF2"/>
+      <text x="288" y="371" font-size="9.5" fill="#0F2540">Sugar — 1kg</text>
+      <text x="288" y="384" font-size="9.5" font-weight="700" fill="#0B8A61">GH₵ 9.00</text>
+      <text x="340" y="398" font-size="7.5" letter-spacing="0.5" fill="#98A2B3">ADD+</text>
+
+      <rect x="394" y="232" width="20" height="20" rx="6" fill="#E8EDF2"/>
+      <text x="422" y="243" font-size="9.5" fill="#0F2540">Milk — 500ml</text>
+      <text x="422" y="256" font-size="9.5" font-weight="700" fill="#0B8A61">GH₵ 7.50</text>
+      <text x="474" y="270" font-size="7.5" letter-spacing="0.5" fill="#98A2B3">ADD+</text>
+
+      <rect x="394" y="296" width="20" height="20" rx="6" fill="#E8EDF2"/>
+      <text x="422" y="307" font-size="9.5" fill="#0F2540">Bread — loaf</text>
+      <text x="422" y="320" font-size="9.5" font-weight="700" fill="#0B8A61">GH₵ 6.00</text>
+      <text x="474" y="334" font-size="7.5" letter-spacing="0.5" fill="#98A2B3">ADD+</text>
+
+      <rect x="394" y="360" width="20" height="20" rx="6" fill="#E8EDF2"/>
+      <text x="422" y="371" font-size="9.5" fill="#0F2540">Soap — bar</text>
+      <text x="422" y="384" font-size="9.5" font-weight="700" fill="#0B8A61">GH₵ 4.50</text>
+      <text x="474" y="398" font-size="7.5" letter-spacing="0.5" fill="#98A2B3">ADD+</text>
+    </g>
+
+    <!-- cart panel -->
+    <g filter="url(#pos-softshadow)">
+      <rect x="516" y="224" width="144" height="186" rx="10" fill="#0F2540"/>
+    </g>
+    <g font-family="Inter, Segoe UI, sans-serif">
+      <text x="532" y="246" font-size="10" font-weight="600" fill="#FFFFFF">Cart</text>
+      <text x="532" y="268" font-size="9" fill="#8595B2">Rice — 5kg</text>
+      <text x="644" y="268" font-size="9" font-weight="600" fill="#E8EDF2" text-anchor="end">42.00</text>
+      <text x="532" y="284" font-size="9" fill="#8595B2">Cooking oil</text>
+      <text x="644" y="284" font-size="9" font-weight="600" fill="#E8EDF2" text-anchor="end">18.50</text>
+      <text x="532" y="300" font-size="9" fill="#8595B2">Sugar — 1kg</text>
+      <text x="644" y="300" font-size="9" font-weight="600" fill="#E8EDF2" text-anchor="end">9.00</text>
+      <line x1="532" y1="312" x2="644" y2="312" stroke="rgba(255,255,255,0.12)"/>
+      <text x="532" y="328" font-size="8" letter-spacing="0.6" fill="#8595B2">TOTAL</text>
+      <text x="644" y="330" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="end">GH₵ 69.50</text>
+      <rect x="532" y="348" width="112" height="28" rx="7" fill="#10B981"/>
+      <text x="588" y="366" font-size="10" font-weight="700" fill="#04211A" text-anchor="middle">Charge</text>
+      <text x="532" y="394" font-size="7.5" letter-spacing="0.6" fill="#5D6E8E">RECEIPT · CASH · MOBILE</text>
+    </g>
+  </g>
+
+  <!-- captions -->
+  <text x="400" y="468" font-family="IBM Plex Mono, Consolas, monospace" font-size="15" fill="#171717" text-anchor="middle" letter-spacing="4">POINT OF SALE SYSTEM</text>
+  <text x="400" y="487" font-family="IBM Plex Mono, Consolas, monospace" font-size="9.5" fill="#98948B" text-anchor="middle" letter-spacing="2">CONCEPT PREVIEW — CHECKOUT &amp; SALES UI · IN DEVELOPMENT · DEMO DATA</text>
+</svg>

@@ -1,0 +1,6 @@
+# robots.txt — Emmanuel Mantey portfolio
+User-agent: *
+Allow: /
+
+# EDIT: replace with the production domain once live
+Sitemap: https://emmanuel-mantey.example.com/sitemap.xml

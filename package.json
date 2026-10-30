@@ -1,0 +1,27 @@
+{
+  "name": "emmanuel-mantey-portfolio",
+  "version": "1.0.0",
+  "description": "Production-ready personal portfolio for Emmanuel Mantey. Static frontend (HTML/CSS/vanilla JS) with a Node.js/Express contact API.",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "node --watch backend/server.js",
+    "start": "node backend/server.js",
+    "check": "node --check backend/server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "portfolio",
+    "full-stack",
+    "nodejs",
+    "express",
+    "vanilla-javascript"
+  ],
+  "author": "Emmanuel Mantey",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.1"
+  }
+}

@@ -1,0 +1,489 @@
+/* ==========================================================================
+   EM. — Emmanuel Mantey Portfolio
+   main.css — EDITORIAL DESIGN SYSTEM
+   Warm off-white paper · charcoal ink · burnt orange accent · forest dark
+   70% neutrals · 20% dark/surfaces · 10% accent
+   ========================================================================== */
+
+:root {
+  /* --- Neutrals (70%) --- */
+  --bg: #F8F7F4;                /* warm paper */
+  --bg-alt: #EEECE7;            /* soft stone band */
+  --surface: #FFFFFF;           /* cards */
+  --line: #DDDAD3;              /* warm hairline */
+  --line-soft: #E7E4DD;
+
+  /* --- Ink --- */
+  --ink: #171717;               /* charcoal */
+  --ink-2: #666666;             /* muted body */
+  --ink-3: #98948B;             /* faint labels */
+
+  /* --- Accent (10%) --- */
+  --accent: #C46A3A;            /* burnt orange */
+  --accent-deep: #A5572F;       /* pressed state */
+  --accent-wash: rgba(196, 106, 58, 0.08);
+
+  /* --- Dark surfaces (20%) --- */
+  --dark: #202522;              /* deep forest charcoal */
+  --dark-2: #2A2F2B;
+  --dark-text: #EFEDE8;
+  --dark-muted: #A2A099;
+  --dark-line: rgba(239, 237, 232, 0.14);
+
+  /* --- Semantic --- */
+  --color-success: #3D7A50;
+  --color-warning: #9A7420;
+  --color-danger: #B04438;
+
+  /* --- Typography --- */
+  --font-display: "Manrope", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Cascadia Mono", Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: clamp(1.4rem, 1.25rem + 0.6vw, 1.7rem);
+  --text-3xl: clamp(1.8rem, 1.5rem + 1.2vw, 2.4rem);
+  --text-4xl: clamp(2.2rem, 1.8rem + 2vw, 3.4rem);
+  --text-5xl: clamp(2.7rem, 1.7rem + 4.6vw, 4.9rem);
+
+  /* --- Layout --- */
+  --container: 1180px;
+  --container-wide: 1280px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-y: clamp(4.5rem, 9vw, 8rem);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-pill: 999px;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 0.16s;
+  --dur-base: 0.28s;
+  --dur-slow: 0.55s;
+  --dur-reveal: 0.65s;
+
+  /* --- Elevation (warm, soft) --- */
+  --shadow-1: 0 1px 2px rgba(23, 23, 23, 0.05), 0 2px 8px rgba(23, 23, 23, 0.04);
+  --shadow-2: 0 14px 40px -12px rgba(23, 23, 23, 0.16);
+  --shadow-accent: 0 10px 28px -10px rgba(196, 106, 58, 0.42);
+
+  color-scheme: light;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.65;
+  color: var(--ink-2);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* faint paper grain — adds authored texture without decoration noise */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+ul[class], ol[class] { list-style: none; }
+a { color: inherit; text-decoration: none; }
+code, kbd, pre { font-family: var(--font-mono); }
+
+::selection {
+  background: rgba(196, 106, 58, 0.22);
+  color: var(--ink);
+}
+
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #C9C5BC transparent;
+  }
+}
+
+/* ---------- Accessibility helpers ---------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.7rem 1.2rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: top var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus-visible { top: 1rem; }
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--wide {
+  max-width: calc(var(--container-wide) + 2 * var(--gutter));
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+.section--tight {
+  padding-block: calc(var(--section-y) * 0.55);
+}
+
+/* Full-bleed stone / dark bands give each page its rhythm */
+.band {
+  background: var(--bg-alt);
+  border-block: 1px solid var(--line);
+}
+
+.band--dark {
+  background: var(--dark);
+  color: var(--dark-muted);
+  border-block: 0;
+}
+
+/* ---------- Semantic typography ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-xl); letter-spacing: -0.02em; }
+p { text-wrap: pretty; }
+
+/* Eyebrow: mono label with editorial index number */
+.eyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 2.2rem;
+  height: 1px;
+  background: var(--ink);
+  transform: translateY(-0.28em);
+  flex-shrink: 0;
+}
+
+/* index number overlay — the "01 /" system */
+.eyebrow .num,
+.num-label {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.eyebrow--center { justify-content: center; }
+.eyebrow--center::after {
+  content: "";
+  width: 2.2rem;
+  height: 1px;
+  background: var(--ink);
+  transform: translateY(-0.28em);
+  flex-shrink: 0;
+}
+
+/* warm emphasis: underline the key words instead of gradient text */
+.em-accent {
+  font-style: normal;
+  color: var(--accent);
+}
+
+/* subtle underline highlight for headline keywords */
+.hl {
+  background-image: linear-gradient(transparent 62%, rgba(196, 106, 58, 0.28) 62%);
+}
+
+.section-intro {
+  max-width: 38rem;
+  margin-top: 1.1rem;
+  color: var(--ink-2);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+
+.section-head { margin-bottom: clamp(2.5rem, 5vw, 3.75rem); }
+.section-head--center { text-align: center; }
+.section-head--center .section-intro { margin-inline: auto; }
+.section-head--center .eyebrow { justify-content: center; }
+
+/* editorial hairline divider */
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-head--center::before,
+.section-head--center::after { content: none; }
+
+/* ---------- Page hero (subpages) ---------- */
+.page-hero {
+  position: relative;
+  padding-top: clamp(8.5rem, 15vw, 12rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+}
+
+.page-hero h1 {
+  font-size: var(--text-4xl);
+  max-width: 16ch;
+  margin-top: 1.4rem;
+}
+
+.page-hero .lead {
+  max-width: 40rem;
+  margin-top: 1.4rem;
+  font-size: var(--text-lg);
+  color: var(--ink-2);
+  text-wrap: balance;
+}
+
+/* ---------- Badges & chips ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.36rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.badge--hero {
+  border-color: rgba(196, 106, 58, 0.4);
+  color: var(--accent-deep);
+  background: rgba(196, 106, 58, 0.06);
+}
+
+.badge__pulse {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.badge__pulse--live  { background: var(--color-success); }
+.badge__pulse--wip   { background: var(--color-warning); }
+.badge__pulse--proto { background: var(--accent); }
+
+.badge--hero .badge__pulse {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(196, 106, 58, 0.18);
+}
+
+.tech-badge {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.band--dark .tech-badge,
+.spark-dark .tech-badge {
+  background: var(--dark-2);
+  border-color: var(--dark-line);
+  color: var(--dark-muted);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--dark);
+  color: var(--dark-muted);
+  border-top: 0;
+  margin-top: 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(2.75rem, 6vw, 4.25rem);
+}
+
+.footer-brand .brand { margin-bottom: 1rem; }
+
+.footer-brand .brand,
+.footer-brand .brand:hover { color: var(--dark-text); }
+
+.footer-brand .brand__dot { color: var(--accent); }
+
+.footer-brand p {
+  max-width: 26rem;
+  font-size: var(--text-sm);
+}
+
+.footer-col h3 {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7D7F78;
+  margin-bottom: 1.2rem;
+}
+
+.footer-col ul { display: grid; gap: 0.7rem; }
+
+.footer-col a {
+  color: var(--dark-muted);
+  font-size: var(--text-sm);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.footer-col a:hover { color: var(--dark-text); }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.6rem;
+  border-top: 1px solid var(--dark-line);
+  font-size: var(--text-xs);
+  color: #7D7F78;
+}
+
+.footer-bottom .mono { font-family: var(--font-mono); }
+
+/* footer social icons adapt to dark */
+.site-footer .social-link {
+  border-color: var(--dark-line);
+  color: var(--dark-muted);
+  background: transparent;
+}
+
+.site-footer .social-link:hover {
+  color: var(--dark-text);
+  border-color: rgba(196, 106, 58, 0.6);
+  background: rgba(196, 106, 58, 0.1);
+}
+
+/* footer pending placeholder */
+.footer-pending {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #7D7F78;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Brand ---------- */
+.brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.brand__dot { color: var(--accent); }
+
+/* ---------- Back to top ---------- */
+.to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7D7F78;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.to-top:hover { color: var(--dark-text); }
+
+/* ---------- Utilities ---------- */
+.grid { display: grid; gap: 1.5rem; }
+.mono { font-family: var(--font-mono); }

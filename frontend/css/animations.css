@@ -1,0 +1,53 @@
+/* ==========================================================================
+   animations.css — page-load transitions & reduced-motion guarantees
+   Motion budget: entrance beats, gentle reveals, micro-interactions only.
+   ========================================================================== */
+
+/* ---------- Reduced motion: flatten everything ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero .eyebrow,
+  .hero h1,
+  .hero .lead,
+  .hero__actions,
+  .hero__meta,
+  .hero__actions .btn,
+  .hero__visual {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .marquee__track {
+    animation: none !important;
+    transform: none !important;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .flow-line .flow-line__pulse { r: 0; }
+  .flow-line svg { display: none; }
+
+  .flow-line .flow-line__dash { opacity: 1 !important; }
+
+  .page-enter main { animation: none !important; }
+
+  html.page-exit > body { opacity: 1; }
+
+  .tilt { transform: none !important; }
+
+  .cursor-ring { display: none !important; }
+}

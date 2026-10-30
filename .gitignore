@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment — never commit secrets or credentials
+.env
+.env.*
+!.env.example
+
+# Runtime data (contact submission fallback log)
+backend/data/
+*.log
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

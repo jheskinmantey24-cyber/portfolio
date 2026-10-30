@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Business Operating System prototype preview: a browser window with a charcoal sidebar, operations summary cards, and a process table with per-row status badges. Clearly labeled as a prototype concept with demo data.">
+  <defs>
+    <linearGradient id="bos-canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F1EFEA"/>
+      <stop offset="1" stop-color="#E7E4DD"/>
+    </linearGradient>
+    <radialGradient id="bos-tint" cx="0.85" cy="0.05" r="0.8">
+      <stop offset="0" stop-color="#5C7FA6" stop-opacity="0.1"/>
+      <stop offset="0.6" stop-color="#5C7FA6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="bos-fogrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#171717" stroke-opacity="0.04"/>
+    </pattern>
+    <clipPath id="bos-window">
+      <rect x="120" y="62" width="560" height="376" rx="16"/>
+    </clipPath>
+    <filter id="bos-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#171717" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#171717" flood-opacity="0.08"/>
+    </filter>
+    <filter id="bos-softshadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.4" flood-color="#232A31" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- warm editorial canvas -->
+  <rect width="800" height="500" fill="url(#bos-canvas)"/>
+  <rect width="800" height="500" fill="url(#bos-fogrid)"/>
+  <rect width="800" height="500" fill="url(#bos-tint)"/>
+
+  <!-- ================= browser window ================= -->
+  <g filter="url(#bos-shadow)">
+    <rect x="120" y="62" width="560" height="376" rx="16" fill="#FFFFFF"/>
+  </g>
+  <rect x="120" y="62" width="560" height="376" rx="16" fill="none" stroke="#DDDAD3" stroke-width="1.2"/>
+
+  <!-- chrome bar -->
+  <path d="M136 62h528a16 16 0 0 1 16 16v20H120V78a16 16 0 0 1 16-16z" fill="#F1F3F5"/>
+  <line x1="120" y1="98" x2="680" y2="98" stroke="#E3E6EA" stroke-width="1"/>
+  <circle cx="142" cy="80" r="5.5" fill="#C96F5A"/>
+  <circle cx="162" cy="80" r="5.5" fill="#C7A24C"/>
+  <circle cx="182" cy="80" r="5.5" fill="#6FA07A"/>
+  <rect x="208" y="70" width="330" height="20" rx="10" fill="#FFFFFF" stroke="#E3E6EA"/>
+  <rect x="218" y="75.5" width="9" height="9" rx="2" fill="none" stroke="#8A94A6" stroke-width="1.2"/>
+  <text x="234" y="83.5" font-family="IBM Plex Mono, Consolas, monospace" font-size="10" fill="#8A94A6">bos-prototype · overview</text>
+  <circle cx="658" cy="80" r="5" fill="none" stroke="#C3CBD4" stroke-width="1.5"/>
+
+  <!-- ================= viewport (clipped) ================= -->
+  <g clip-path="url(#bos-window)">
+    <rect x="120" y="98" width="560" height="340" fill="#F4F5F7"/>
+    <!-- sidebar (charcoal) -->
+    <rect x="120" y="98" width="112" height="340" fill="#232A31"/>
+    <!-- brand -->
+    <rect x="136" y="112" width="14" height="14" rx="7" fill="#7C9BC4"/>
+    <text x="156" y="123" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" font-weight="600" fill="#FFFFFF" letter-spacing="1">BOS</text>
+    <!-- nav: overview active -->
+    <rect x="128" y="144" width="96" height="22" rx="6" fill="rgba(255,255,255,0.08)"/>
+    <rect x="138" y="151" width="7" height="7" rx="2" fill="#7C9BC4"/>
+    <text x="152" y="159" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#FFFFFF">Overview</text>
+
+    <rect x="138" y="185" width="7" height="7" rx="2" fill="none" stroke="#79828E" stroke-width="1.4"/>
+    <text x="152" y="192" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#79828E">Processes</text>
+
+    <rect x="138" y="219" width="7" height="7" rx="2" fill="none" stroke="#79828E" stroke-width="1.4"/>
+    <text x="152" y="226" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#79828E">Records</text>
+
+    <rect x="138" y="253" width="7" height="7" rx="2" fill="none" stroke="#79828E" stroke-width="1.4"/>
+    <text x="152" y="260" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#79828E">Handovers</text>
+
+    <rect x="138" y="287" width="7" height="7" rx="2" fill="none" stroke="#79828E" stroke-width="1.4"/>
+    <text x="152" y="294" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#79828E">Reports</text>
+
+    <line x1="132" y1="404" x2="220" y2="404" stroke="rgba(255,255,255,0.1)"/>
+    <circle cx="146" cy="420" r="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="160" y="423.5" font-family="Inter, Segoe UI, sans-serif" font-size="9.5" fill="#79828E">Owner</text>
+
+    <!-- main -->
+    <text x="252" y="128" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="600" fill="#171B1E">Operations</text>
+    <rect x="556" y="108" width="104" height="24" rx="12" fill="#FFFFFF" stroke="#E3E6EA"/>
+    <circle cx="568" cy="120" r="3.5" fill="#7C9BC4"/>
+    <text x="576" y="123.5" font-family="IBM Plex Mono, Consolas, monospace" font-size="9" fill="#64748B">demo data</text>
+
+    <!-- KPI cards -->
+    <g filter="url(#bos-softshadow)">
+      <rect x="252" y="146" width="126" height="44" rx="8" fill="#FFFFFF" stroke="#E5E8EC"/>
+      <rect x="394" y="146" width="126" height="44" rx="8" fill="#FFFFFF" stroke="#E5E8EC"/>
+      <rect x="536" y="146" width="124" height="44" rx="8" fill="#FFFFFF" stroke="#E5E8EC"/>
+    </g>
+    <text x="264" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="8" letter-spacing="0.6" fill="#6B7280">ACTIVE PROCESSES</text>
+    <text x="264" y="181" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#171B1E">7</text>
+
+    <text x="406" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="8" letter-spacing="0.6" fill="#6B7280">STEPS IN PROGRESS</text>
+    <text x="406" y="181" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#171B1E">23</text>
+
+    <text x="548" y="162" font-family="Inter, Segoe UI, sans-serif" font-size="8" letter-spacing="0.6" fill="#6B7280">DUE TODAY</text>
+    <text x="548" y="181" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#171B1E">4</text>
+    <circle cx="576" cy="175" r="4" fill="#C7A24C"/>
+
+    <!-- process table -->
+    <text x="252" y="214" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#171B1E">Business processes</text>
+    <g font-family="Inter, Segoe UI, sans-serif">
+      <!-- column heads -->
+      <text x="260" y="232" font-size="7.5" letter-spacing="0.8" fill="#7B8494">PROCESS</text>
+      <text x="430" y="232" font-size="7.5" letter-spacing="0.8" fill="#7B8494">STEP</text>
+      <text x="504" y="232" font-size="7.5" letter-spacing="0.8" fill="#7B8494">STATE</text>
+
+      <!-- row 1 -->
+      <g filter="url(#bos-softshadow)">
+        <rect x="252" y="240" width="408" height="42" rx="8" fill="#FFFFFF" stroke="#E5E8EC"/>
+      </g>
+      <text x="264" y="257" font-size="10" font-weight="600" fill="#171B1E">Stock receiving</text>
+      <text x="264" y="271" font-size="8" fill="#8B929D">4 involved steps · owner: manager</text>
+      <text x="430" y="262" font-size="9" fill="#64707E">Step 3 of 5</text>
+      <rect x="262" y="272" width="240" height="3" rx="1.5" fill="#EDF0F3"/>
+      <rect x="262" y="272" width="144" height="3" rx="1.5" fill="#7C9BC4"/>
+      <rect x="500" y="250" width="70" height="18" rx="9" fill="#FDF3D5"/>
+      <text x="535" y="262.5" font-size="8.5" font-weight="600" fill="#8A6417" text-anchor="middle">In progress</text>
+
+      <!-- row 2 -->
+      <g filter="url(#bos-softshadow)">
+        <rect x="252" y="290" width="408" height="42" rx="8" fill="#FFFFFF" stroke="#E5E8EC"/>
+      </g>
+      <text x="264" y="307" font-size="10" font-weight="600" fill="#171B1E">Order fulfilment</text>
+      <text x="264" y="321" font-size="8" fill="#8B929D">5 involved steps · owner: sales</text>
+      <text x="430" y="312" font-size="9" fill="#64707E">Step 5 of 5</text>
+      <rect x="262" y="322" width="240" height="3" rx="1.5" fill="#EDF0F3"/>
+      <rect x="262" y="322" width="240" height="3" rx="1.5" fill="#3D7A50"/>
+      <rect x="500" y="300" width="70" height="18" rx="9" fill="#E7F2E9"/>
+      <text x="535" y="312.5" font-size="8.5" font-weight="600" fill="#2C6E40" text-anchor="middle">Complete</text>
+
+      <!-- row 3 -->
+      <g filter="url(#bos-softshadow)">
+        <rect x="252" y="340" width="408" height="42" rx="8" fill="#FFFFFF" stroke="#E5E8EC"/>
+      </g>
+      <text x="264" y="357" font-size="10" font-weight="600" fill="#171B1E">Supplier handover</text>
+      <text x="264" y="371" font-size="8" fill="#8B929D">3 involved steps · owner: manager</text>
+      <text x="430" y="362" font-size="9" fill="#64707E">Step 1 of 5</text>
+      <rect x="262" y="372" width="240" height="3" rx="1.5" fill="#EDF0F3"/>
+      <rect x="262" y="372" width="48" height="3" rx="1.5" fill="#7C9BC4"/>
+      <rect x="500" y="350" width="70" height="18" rx="9" fill="#E9EFF7"/>
+      <text x="535" y="362.5" font-size="8.5" font-weight="600" fill="#3B5E8C" text-anchor="middle">Scheduled</text>
+
+      <!-- row 4 -->
+      <g filter="url(#bos-softshadow)">
+        <rect x="252" y="390" width="408" height="42" rx="8" fill="#FFFFFF" stroke="#E5E8EC"/>
+      </g>
+      <text x="264" y="407" font-size="10" font-weight="600" fill="#171B1E">Daily close-out</text>
+      <text x="264" y="421" font-size="8" fill="#8B929D">4 involved steps · owner: sales</text>
+      <text x="430" y="412" font-size="9" fill="#64707E">Step 2 of 5</text>
+      <rect x="262" y="422" width="240" height="3" rx="1.5" fill="#EDF0F3"/>
+      <rect x="262" y="422" width="96" height="3" rx="1.5" fill="#7C9BC4"/>
+      <rect x="500" y="400" width="70" height="18" rx="9" fill="#FDF3D5"/>
+      <text x="535" y="412.5" font-size="8.5" font-weight="600" fill="#8A6417" text-anchor="middle">In progress</text>
+    </g>
+  </g>
+
+  <!-- captions -->
+  <text x="400" y="468" font-family="IBM Plex Mono, Consolas, monospace" font-size="15" fill="#171717" text-anchor="middle" letter-spacing="4">BUSINESS OPERATING SYSTEM</text>
+  <text x="400" y="487" font-family="IBM Plex Mono, Consolas, monospace" font-size="9.5" fill="#98948B" text-anchor="middle" letter-spacing="2">PROTOTYPE — PROCESS-MODEL CONCEPT · FEATURES MODEST BY DESIGN · DEMO DATA</text>
+</svg>
